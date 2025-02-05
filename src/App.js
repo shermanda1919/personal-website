@@ -1,29 +1,38 @@
 import React from 'react';
+import Banner from "./Banner";
 import Footer from "./Footer";
 import Typewriter from 'react-typewriter-effect';
 
 function App() {
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
+    <div className="flex flex-col items-center justify-start min-h-screen bg-gray-100 overflow-y-auto">
+      <Banner/>
       <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Hello, I'm Amanda Sherman</h1>
+        <h1 className="text-4xl font-bold mt-12 mb-4">Hello, I'm Amanda Sherman</h1>
         <p className="text-2xl italic text-gray-600 mb-6">CS Major @ UMass Amherst</p>
-        <img src="" className="w-32 h-auto mx-auto" />
+        <img src="https://amanda-sherman.netlify.app/2024_profile_pic.png" className="h-auto w-80 max-w-xs sm_max-w-sm sm:rounded-md mx-auto" />
+      </div>
+      <div className = "text-center">
+        <h1 className="text-4xl font-bold mt-6 mb-6">Classes I've Taken</h1>
+        <div className="ml-2">
+          <ul className="list-disc text-left mb-4">
+            <li className="text-gray-600">CS 121: Intro to Programming</li>
+            <li className="text-gray-600">Math 131: Calculus I</li>
+            <li className="text-gray-600">Math 132: Calculus II</li>
+            <li className="text-gray-600">Math 235: Linear Algebra</li>
+            <li className="text-gray-600">Math 233: Calculus III</li>
+            <li className="text-gray-600">CICS 160: Object Oriented Programming</li>
+            <li className="text-gray-600">CICS 198c: Intro to C Programming</li>
+          </ul>
+        </div>
       </div>
       <div className="text-center">
         <h1 className="text-4xl font-bold mt-6 mb-6">My Experience</h1>
         <div className="ml-2">
           <p className="text-left text-xl">Research Assistant @UMass Amherst (Oct 2024 - Present)</p>
           <ul className="list-disc text-left mb-4">
-            <li className="text-gray-600">Conducting research on NLP (Natural Language Processing), specifically simplifying text outputs from prompts, under PhD student Maha Alkhairy</li>
-          </ul>
-          <p className="text-left text-xl">Founder @FuseBloom (Jun 2020 - Present)</p>
-          <ul className="text-left list-disc text-left mb-4">
-            <li className="text-gray-600">Founder of FuseBloom, a free online platform for high schoolers that custom curates internship and summer opportunities to advance educational equality</li>
-            <li className="text-gray-600">1000+ high schoolers subscribed to our opportunities newsletter</li>
-            <li className="text-gray-600">800+ followers on Instagram</li>
-            <li className="text-gray-600">2nd Place Winner of 2023 Minute Pitch entrepreneurship competition</li>
-            <li className="text-gray-600">60% Acceptance Rate of high school students into internships (12 out of 20 students total)</li>
+            <li className="text-gray-600">Conducting research on NLP (Natural Language Processing), specifically simplifying text outputs from prompts, under PhD candidate Maha Alkhairy</li>
+            <li className="text-gray-600">Experimenting with prompt engineering techniques (e.x. zero shot, one shot, few shot, chain of thought)</li>
           </ul>
           <p className="text-left text-xl">Research Assistant @UMass Amherst (Jun 2024 - Aug 2024)</p>
           <ul className="list-disc text-left mb-4">
@@ -36,6 +45,14 @@ function App() {
             <li className="text-gray-600">Learned about process of launching successful startup</li>
             <li className="text-gray-600">Networked and collaborated with Pioneer Valley entrepreneurs to refine FuseBloom's business model</li>
           </ul>
+          <p className="text-left text-xl">Founder @FuseBloom (Jun 2020 - Oct 2023)</p>
+          <ul className="text-left list-disc text-left mb-4">
+            <li className="text-gray-600">Founder of FuseBloom, a free online platform for high schoolers that custom curates internship and summer opportunities to advance educational equality</li>
+            <li className="text-gray-600">1000+ high schoolers subscribed to our opportunities newsletter</li>
+            <li className="text-gray-600">800+ followers on Instagram</li>
+            <li className="text-gray-600">2nd Place Winner of 2023 Minute Pitch entrepreneurship competition</li>
+            <li className="text-gray-600">60% Acceptance Rate of high school students into internships (12 out of 20 students total)</li>
+          </ul>
           <p className="text-left text-xl">Director of Outreach @Hack3 (Jul 2020 - Jun 2022)</p>
           <ul className="list-disc text-left mb-4">
             <li className="text-gray-600">Coordinate all outreach and social media operations for Hack3</li>
@@ -46,9 +63,22 @@ function App() {
             <li className="text-gray-600">2022 MLH Hackathon</li>
           </ul>
         </div>
+        {/*
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mt-4 mb-4">Contact Me</h1>
+          <p className="text-2xl italic text-gray-600 mb-6"></p>
+          <img src="" className="w-32 h-auto mx-auto" />
+        </div>
+        }
+        {/*Resume Download Button */}
+        <div className="mt-6 mb-8">
+        <a href="/resume.pdf" download="resume.pdf" className="bg-blue-500 text-white text-xl font-bold px-6 py-3 rounded-lg hover:bg-blue-600 transition duration-300 mb-4">Download My Resume</a>
+        </div>
         
       </div>
-      <Footer />
+      <div className="mb-4">
+        <Footer />
+      </div>
     </div>
   );
 }
