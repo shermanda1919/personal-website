@@ -1,7 +1,6 @@
 import React from 'react';
 import Banner from "./Banner";
 import Footer from "./Footer";
-import Typewriter from 'react-typewriter-effect';
 
 function App() {
   return (
@@ -9,8 +8,19 @@ function App() {
       <Banner/>
       <div className="text-center">
         <h1 className="text-4xl font-bold mt-12 mb-4">Hello, I'm Amanda Sherman</h1>
-        <p className="text-2xl italic text-gray-600 mb-6">CS Major @ UMass Amherst</p>
-        <img src="https://amanda-sherman.netlify.app/2024_profile_pic.png" className="h-auto w-80 max-w-xs sm_max-w-sm sm:rounded-md mx-auto" />
+        <p className="text-2xl italic text-gray-600 mb-6">3rd Year CS Major @ UMass Amherst</p>
+        <img src="https://amanda-sherman.netlify.app/2024_profile_pic.png" alt="Amanda Sherman's profile" className="h-auto w-80 max-w-xs sm_max-w-sm sm:rounded-md mx-auto" />
+      </div>
+      <div className = "text-center">
+        <h1 className="text-4xl font-bold mt-6 mb-6">My Technical Skills</h1>
+        <div className="ml-2">
+          <ul className="list-disc text-left mb-4">
+            <li className="text-gray-600">Languages: Java, Python, JavaScript, HTML/CSS, Git, C</li>
+            <li className="text-gray-600">Frameworks: React, WordPress</li>
+            <li className="text-gray-600">Developer Tools: Git, VS Code, Linux</li>
+            <li className="text-gray-600">Libraries: pandas, NumPy, Matplotlib</li>
+          </ul>
+        </div>
       </div>
       <div className = "text-center">
         <h1 className="text-4xl font-bold mt-6 mb-6">Classes I've Taken</h1>
@@ -71,7 +81,7 @@ function App() {
         </div>
         }
         {/*Resume Download Button */}
-        <div className="mt-6 mb-8">
+        <div className="mt-8 mb-8">
         <a href="/resume.pdf" download="resume.pdf" className="bg-blue-500 text-white text-xl font-bold px-6 py-3 rounded-lg hover:bg-blue-600 transition duration-300 mb-4">Download My Resume</a>
         </div>
         
